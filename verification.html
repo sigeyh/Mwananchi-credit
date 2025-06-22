@@ -102,10 +102,9 @@
 <body>
   <h2>ACCOUNT SAVINGS</h2>
 
-  <!-- Main Card Section -->
   <div class="card" id="formSection">
     <p>
-      Based on your selected loan amount of <span class="highlight" id="loanAmount">Ksh ...</span>, FINTECH HUB VENTURES 3 requires you to save
+      Based on your selected loan amount of <span class="highlight" id="loanAmount">Ksh ...</span>, <strong>FINTECH HUB VENTURES 3</strong> requires you to save
       <span class="highlight" id="savingAmount">Ksh ...</span> to your account. This strengthens your credit profile.
       Savings are withdrawable after successful loan repayment.
     </p>
@@ -132,7 +131,6 @@
     <button class="btn" onclick="verifyPayment()">Verify Payment to Initiate Loan Disbursement</button>
   </div>
 
-  <!-- Success Section -->
   <div id="successSection">
     <h2 style="color:#00ffcc;">✅ Payment Verified!</h2>
     <p>Your loan disbursement is now being processed.</p>
@@ -140,7 +138,7 @@
     <div id="timer">03:00</div>
   </div>
 
-  <div class="footer">© Mwananchi Credi</div>
+  <div class="footer">© Mwananchi Credit 2025</div>
 
   <script>
     const loanAmount = parseInt(localStorage.getItem("loanAmount")) || 4790;
@@ -167,12 +165,12 @@
 
     function verifyPayment() {
       const message = document.getElementById("mpesaMessage").value.toUpperCase();
-      if (message.includes("HAKIKA R PROVISION")) {
+      if (message.includes("FINTECH HUB VENTURES 3")) {
         document.getElementById("formSection").style.display = "none";
         document.getElementById("successSection").style.display = "block";
-        startTimer(3 * 60); // 3 minutes countdown
+        startTimer(180); // 3-minute countdown
       } else {
-        alert("❌ Verification failed. Make sure the message includes HAKIKA R PROVISION.");
+        alert("❌ Verification failed. Make sure the message includes FINTECH HUB VENTURES 3.");
       }
     }
 
